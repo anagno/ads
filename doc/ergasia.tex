@@ -1,0 +1,89 @@
+%xelatex -shell-escape -output-directory=bin ergasia.tex
+\documentclass{assignment}
+
+\usepackage{enumerate} % Για την χρησιμοποίηση roman enumerate
+\usepackage{pdflscape}
+
+%\university{Πανεπιστήμιο Πειραιώς}{Πα.Πει.}
+%\school{Τμήμα Πληροφορικής}{Π.Μ.Σ. "Πληροφορική"}
+%\department{Πρόγραμμα Μεταπτυχιακών Σπουδών «Πληροφορική»}{}
+%\cover{images/cover.jpg}{http://www.cyberciti.biz/faq/grub-boot-into-single-user-mode/}
+
+\title{Αντικειμενοστρεφής Προγραμματισμός  \\ Εργασία Εξαμήνου}
+%\projectlevel{Εργαστήριο Λειτουργικά Συστήματα}
+%\lesson{Λειτουργικά Συστήματα}{1}
+\date{Αθήνα, 2014}
+
+\author{Αναγνωστόπουλος Βασίλης - Θάνος}
+%\register{ΜΠΠΛ13002}{1}
+
+%\exercauthor{Αναγνωστόπουλος Βασίλης - Θάνος}{06107083}{9}
+
+%\advisor{Τσακίρη Μαρία, Αναπληρώτρια Καθηγήτρια Ε.Μ.Π.}
+
+\begin{document}
+
+\maketitle
+% Να σκεφτώ τί αλλαγές θέλω να κάνω με τις αριθμήσεις και άμα θέλω να κάνω.
+% Να σκεφτώ να τις ενσωματώσω και στο assignment.cls
+
+%\setcounter{page}{1} 
+%\pagenumbering{roman}
+
+%\pagestyle{plain}
+%\tableofcontents
+%\listoftables
+%\listoffigures
+%\newpage
+
+
+%\pagestyle{headings}
+%\pagestyle{fancy}
+%\setcounter{page}{1} 
+%\pagenumbering{arabic}
+
+\section{Εισαγωγή - Εκφώνηση της άσκησης}
+
+Οι αγγελίες σε εφημερίδα χρεώνονται κλιμακωτά ανάλογα με το πλήθος των γραμμάτων σύμφωνα με τον παρακάτω πίνακα:
+
+\begin{table}[h]
+\begin{center}
+  \begin{tabular}{|c|c|}
+    \hline
+    Πλήθος Γραμμάτων & Κόστος ανα λέξη \\ \hline
+    1-25             & 5               \\ \hline 
+    26-100           & 3.5             \\ \hline 
+    101 και άνω      & 2               \\ \hline  
+  \end{tabular}
+\caption{Τα εικονίδια του διαγράμματος οντοτήτων συσχετίσεων.}
+\label{table:icons}
+\end{center}
+\end{table}
+
+Να γράψετε πρόγραμμα  JAVA:
+\begin{itemize}
+  \item Θα διαβάσει το κείμενο μιας αγγελίας γράμμα-γράμμα έως ότου να συναντήσει την τελεία.
+  \item Θα υπολογίζει πόσα γράμματα και πόσες λέξεις περιέχει η αγγελία;
+  \item Θα εμφανίζει το ποσό της χρέωσης για την αγγελία.
+  \item Αν στην ειδική στήλη της εφημερίδας που τοποθετούνται οι αγγελίες χωρούν σε κάθε γραμμή 11 γράμματα κατά μέσο όρο, να εμφανίζει πόσες γραμμές είναι η αγγελία.
+\end{itemize}
+
+Σημείωση: Να θεωρήσετε ότι σε κάθε επανάληψη εισάγεται ένας μόνο χαρακτήρας και δεν χρησιμοποιούνται άλλα σημεία στίξης πέραν της τελείας. Οι λέξεις χωρίζονται με το χαρακτήρα του κενού.
+
+\section{Υλοποίηση του προγράμματος}
+
+\inputminted[breaklines=true,linenos,tabsize=2]{java}{../../src/ads/Ads.java}
+
+
+
+
+\phantomsection \label{Βιβλιογραφία}
+\addcontentsline{toc}{section}{Βιβλιογραφία}
+%\mtcaddchapter[Βιβλιογραφία] % Λόγω του minitoc
+\bibliographystyle{plain}
+\bibliography{references}
+
+\newpage
+
+\end{document}
+
